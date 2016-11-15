@@ -2,6 +2,10 @@
 <html>
 
   {% include head.html %}
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
 
@@ -26,7 +30,7 @@
           {% include icon-links.html %}
         </div>
 
-        <div class="executive-summary" itemprop="description">
+        <div id="sum1" class="executive-summary" itemprop="description">
           <p>23 years old spaniard living and studying in South Korea. Coding knight (Spending my time reading books about 
           Ruby, C++, BASH...), Linux evangelist and ventures seeker.</p>
           
@@ -40,16 +44,38 @@
         </div>
 
         {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button" itemprop="email">Contact me</a>
+        <a class="contact-button" itemprop="email">Contact me</a>
         {% elsif site.resume_looking_for_work == 'no' %}
         <a class="contact-button not-looking">I'm not looking for work right now.</a>
         {% else %}
         {% endif %}
 
+
+            <div data-role="popup" id="ll" class="ui-content" style="display: none">
+        <div class="LI-profile-badge"  display="block" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="vicente-adolfo-bolea-sánchez-b0607273"><a class="LI-simple-link" href='https://kr.linkedin.com/in/vicente-adolfo-bolea-s%C3%A1nchez-b0607273?trk=profile-badge'>Vicente Adolfo Bolea Sánchez</a></div>
         <script>
-          $(#contat-button").hover(function() {
-                <div class="LI-profile-badge" display="block" data-version="v1" data-size="medium" data-locale="es_ES" data-type="vertical" data-theme="dark" data-vanity="vicente-adolfo-bolea-sánchez-b0607273"><a class="LI-simple-link" href='https://kr.linkedin.com/in/vicente-adolfo-bolea-s%C3%A1nchez-b0607273?trk=profile-badge'>Vicente Adolfo Bolea Sánchez</a></div>
-            }
+  var has_entered = false;
+  $(".contact-button").click(function(event) {
+    createTooltip(event);               
+    $("#ll").show()
+  })
+    //$("#ll").hider()
+ // $("#ll").mouseout(function() {
+ //   if (has_entered == true) {
+ //     $("#ll").hide()
+ //   }
+ // }).mouseover(function() {
+ //   has_entered = true;
+ // });
+  function createTooltip(event){          
+    $('#ll').appendTo('#sum1');
+    positionTooltip(event);        
+  };
+  function positionTooltip(event){
+    var tPosX = event.pageX - 10;
+    var tPosY = event.pageY - 100;
+    $('#ll').css({'position': 'absolute', 'top': tPosY, 'left': tPosX});
+  };
         </script>
       </header>
 
@@ -63,11 +89,11 @@
 
         <!-- Duplicate these resume-item elements and edit accordingly for each job you want to add here -->
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">SunnySideUp Systems
+          <h3 class="resume-item-title" itemprop="name">Gurum & Systems
           </h3> <h4 class="resume-item-details" itemprop="description">CTO &bull; Dec, 2015 &mdash; Present</h4>
           <p class="resume-item-copy"> Cofounder and member of the executive board of SunnySideUp systems. At the beginning of our startup I assumed several roles such as being the Chief Architecture, Devops, and SCRUM master. Currently as our team grew I assumed the CTO position to coordinate and plan technical and engineering related decisions, I lead a team of 6 developers.</p>
 
-          <p class="resume-item-copy">SunnySideUp provides a big data processing and storage framework called Eclipse. It has three main components: EclipseMR (fast MapReduce engine), EclipseDFS (Fair and balanced Distributed file system) and EclipseSQL (Distributed SQL engine). EclipseDFS was released on April’16 while EclipseMR is expected to be release in December’16.</p>
+          <p class="resume-item-copy">Gurum & systems provides a big data processing and storage framework called Velox. It has three main components: VeloxMR (fast MapReduce engine), VeloxDFS (Fair and balanced Distributed file system) and VeloxSQL (Distributed SQL engine). VeloxDFS was released on April’16 while VeloxMR is expected to be release in December’16.</p>
 
           <p class="resume-item-copy">During the winter of 2015-2016 SunnySideUp was placed in University of California, Berkeley. Currently, we moved our office to Ulsan, South Korea.</p>
         </div><!-- end of resume-item -->
@@ -79,7 +105,7 @@
           <p class="resume-item-copy">I have been working as an undergraduate lab intern in DICL lab since few month after my arrival at Korea. My stay of three years in this lab gave me an unique experience in the computer sciences research challenging me to design and implement distributed frameworks which aim to compete current ones. Also, as a lab member I was enabled to attend several seminars from many great scientist from all the world. (http://dicl.unist.ac.kr/)</p>
         <div class="resume-item">
           <ul class="resume-item-list">
-            <li>First contributor and designer of Eclipse framework (experimental distributed cache framework with data migration and Chord network) currently working on it, along two other graduate students.</li>
+            <li>First contributor and designer of Velox framework (experimental distributed cache framework with data migration and Chord network) currently working on it, along two other graduate students.</li>
             <li>Development of Simring simulator (another experimental distributed cache using file migration).</li>
             <li>Teacher Assistant and official tutor for Engineering programming (First year programming course).</li>
           </ul>
@@ -127,9 +153,9 @@
         </header>
 
         <div class="resume-item">
-          <h3 class="resume-item-title">Eclipse big data framework</a></h3>
+          <h3 class="resume-item-title">Velox big data framework</a></h3>
           <h4 class="resume-item-details">CoFounder, primary Developer and project manager &bull; 2015 &mdash; Present</h4>
-          <p class="resume-item-copy">SunnySideUp provides a big data processing and storage framework called Eclipse. It has three main components: EclipseMR (fast MapReduce engine), EclipseDFS (Fair and balanced Distributed file system) and EclipseSQL (Distributed SQL engine). EclipseDFS was released on April’16 while EclipseMR is expected to be release in December’16. </p>
+          <p class="resume-item-copy">SunnySideUp provides a big data processing and storage framework called Velox. It has three main components: VeloxMR (fast MapReduce engine), VeloxDFS (Fair and balanced Distributed file system) and VeloxSQL (Distributed SQL engine). VeloxDFS was released on April’16 while VeloxMR is expected to be release in December’16. </p>
         </div>
 
         <div class="resume-item">
@@ -159,28 +185,6 @@
 
       {% if site.resume_section_skills %}
       <!-- begin Skills -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Donut design</h4>
-          <p class="resume-item-copy">Sprinkle art, icing design, eclair management, taste testing, donut/coffee pairing research</p>
-        </div>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Craft beer brewing</h4>
-          <p class="resume-item-copy">Hops inspection, brew testing, distribution management, bottle label design, festival and event management</p>
-        </div>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Family leadership</h4>
-          <p class="resume-item-copy">Bread winning, conflict resolution, couch inspection, TV longevity testing</p>
-        </div>
-
-      </section>
       <!-- end Skills -->
       {% endif %}
 
@@ -226,15 +230,17 @@
         <header class="section-header">
           <h2>Support me by clicking in the ad, Thanks :)</h2>
         </header>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Home site ad -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-7305480543353241"
-     data-ad-slot="3986548424"></ins>
-<script>
+
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Home site ad -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-7305480543353241"
+             data-ad-slot="3986548424"></ins>
+        <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+        </script>
+
       </section>
     
       <!-- end Links -->
