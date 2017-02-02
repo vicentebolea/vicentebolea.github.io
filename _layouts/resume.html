@@ -52,22 +52,21 @@
         {% endif %}
 
 
-            <div data-role="popup" id="ll" class="ui-content" style="display: none">
-        <div class="LI-profile-badge"  display="block" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="vicente-adolfo-bolea-sánchez-b0607273"><a class="LI-simple-link" href='https://kr.linkedin.com/in/vicente-adolfo-bolea-s%C3%A1nchez-b0607273?trk=profile-badge'>Vicente Adolfo Bolea Sánchez</a></div>
-        <script>
+        <div class="popupbox" data-role="popup" id="ll" style="display: none; opacity: 1">
+          <div id="intabdiv" class="LI-profile-badge"  display="block" data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="vicente-adolfo-bolea-sánchez-b0607273"><a class="LI-simple-link" href='https://kr.linkedin.com/in/vicente-adolfo-bolea-s%C3%A1nchez-b0607273?trk=profile-badge'>Vicente Adolfo Bolea Sánchez</a></div>
+          <div class="closepopup" style="opacity: 1; background-color: white; text-align: center">Close</div>
+        </div>
+          <script>
   var has_entered = false;
   $(".contact-button").click(function(event) {
     createTooltip(event);               
     $("#ll").show()
-  })
-    //$("#ll").hider()
- // $("#ll").mouseout(function() {
- //   if (has_entered == true) {
- //     $("#ll").hide()
- //   }
- // }).mouseover(function() {
- //   has_entered = true;
- // });
+  });
+  $('.closepopup').on('click', function(e) {
+    $('.popupbox').fadeOut();
+    $('.fade').fadeOut();
+  });
+
   function createTooltip(event){          
     $('#ll').appendTo('#sum1');
     positionTooltip(event);        
