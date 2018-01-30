@@ -11,9 +11,8 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Vicente Adolfo Bolea Sanchez"
-resume_title:                   "Data Intensive intern researcher"
-resume_contact_email:
-  "vicente.bolea@gmail.com"
+resume_title:                   "Big Data Systems Architect & Research Assistant"
+resume_contact_email:            "vicente.bolea@gmail.com"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -26,7 +25,7 @@ resume_looking_for_work:        "yes"
 resume_section_experience:      true
 resume_section_education:       true
 resume_section_projects:        true
-resume_section_skills:          false 
+resume_section_skills:          true
 resume_section_recognition:     true
 resume_section_links:           true
 resume_section_associations:    true

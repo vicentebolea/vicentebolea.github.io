@@ -32,16 +32,15 @@
         </div>
 
         <div id="sum1" class="executive-summary" itemprop="description">
-          <p>25 years old spaniard graduate student and lab intern in South Korea. Coding knight (Spending my time reading books about 
-          Ruby, C++, BASH...), Linux evangelist and ventures seeker.</p>
+          <p>26 years old spaniard graduate student and research assistant in South Korea. Passionated about computer sciences who
+          spends its time reading books about new and old computer sciences technologies, Linux evangelist and ventures seeker.</p>
           
           <p>I love traveling and living abroad, discovering and learning new cultures. Wherever I go my laptop is my office.</p> 
           <p>I have a strong will and an infinite curiosity for many aspects of our life, especially computer sciences. As well,
           I enjoy leadership and team working, concretely  when it comes to software developing.</p> 
           
-          <p>Besides my hobbies, I am very fluent in English, I speak some Korean and I am native Spanish speaker. 
-          I usually spend my spare time cooking, cycling, reading history (or news) 
-          and of course enjoying a beer with my colleagues</p>
+          <p>Besides my hobbies, I fluent in English, I speak some Korean and I am native Spanish speaker. 
+          I usually spend my spare time cooking; cycling; reading history and news; and, of course enjoying a beer with my colleagues</p>
         </div>
 
         {% if site.resume_looking_for_work == 'yes' %}
@@ -89,6 +88,45 @@
 
         <!-- Duplicate these resume-item elements and edit accordingly for each job you want to add here -->
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Big Data Systems Architect</h3> 
+          <h4 class="resume-item-details" itemprop="description">Fraunhofer IOSB-INA, Germany &bull; Dec, 2017 &mdash; Feb, 2018</h4>
+          <p class="resume-item-copy">As a member of the Big Data department, my role in this position was to provide big data solution for industry 4.0 challenges. 
+          During my stay at Fraunhofer IOSB-INA I designed and developed the functional prototype of what it will later might become an universal plataform for big
+          data technologies at the industrial automation area. </p>
+
+        </div><!-- end of resume-item -->
+
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Research Asssitant</h3>
+          <h4 class="resume-item-details" itemprop="description">Data Intensive Computing Lab, South Korea &bull; Feb, 2017 &mdash; present</h4>
+          <p class="resume-item-copy">During my time as a Research assistant I could focus full-time to finish and realize my projects done during
+          my undergraduate research assistant experience. During this years I attended or published in the following conferences: 
+          <ul class="resume-item-list">
+            <li><b>IEEE Cluster 2017 (Honolulu, USA)</b>, main author of <em>EclipseMR</em></li>
+            <li><b>IEEE/ACM CCGRID 2017  (Madrid, ES)</b>, participant. </li>
+            <li><b>ACM SOSP 2017  (Shanghai, CN)</b>, participant </li>
+          </ul>
+        </div><!-- end of resume-item -->
+
+        <!-- another resume item -->
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+          <h3 class="resume-item-title" itemprop="name">Undergraduate Research Assistant</h3>
+          <h4 class="resume-item-details" itemprop="description">Data Intensive Computing Lab, South Korea &bull; June, 2012 &mdash; Feb 2017</h4>
+          <p class="resume-item-copy">I have been working as an undergraduate lab intern in DICL lab since few month after my arrival at Korea. 
+          My stay of four years in this lab has gave me an unique experience in the computer sciences research challenging me to design and implement distributed 
+          frameworks which aim to compete current ones. Also, as a lab member I was enabled to attend several seminars from many great scientist from all the world.</p>
+        <div class="resume-item">
+          <ul class="resume-item-list">
+            <li><b>Velox Framework</b> architect and main developer (see below).</i>
+              <li><b>Simring prototype </b> architect and main developer (experimental distributed cache).</li>
+              <li><b>Teacher Assistant and official tutor</b> for Engineering programming courses. </li>
+          </ul>
+        </div>
+        </div><!-- end of resume-item -->
+
+        {% if site.show_gurum == 'yes' %}
+
+        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
           <h3 class="resume-item-title" itemprop="name">Gurum & Systems
           </h3> <h4 class="resume-item-details" itemprop="description">CTO &bull; Dec, 2015 &mdash; Present</h4>
           <p class="resume-item-copy"> Cofounder and member of the executive board of SunnySideUp systems. At the beginning of our startup I assumed several roles such as being the Chief Architecture, Devops, and SCRUM master. Currently as our team grew I assumed the CTO position to coordinate and plan technical and engineering related decisions.</p>
@@ -97,20 +135,7 @@
 
           <p class="resume-item-copy">During the winter of 2015-2016 SunnySideUp was placed in University of California, Berkeley. Currently, we moved our office to Ulsan, South Korea.</p>
         </div><!-- end of resume-item -->
-
-        <!-- another resume item -->
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">Data Intensive Computing Lab, UNIST, SOUTH KOREA</h3>
-          <h4 class="resume-item-details" itemprop="description">Undergraduate researcher &bull; June, 2012 &mdash; present</h4>
-          <p class="resume-item-copy">I have been working as an undergraduate lab intern in DICL lab since few month after my arrival at Korea. My stay of three years in this lab gave me an unique experience in the computer sciences research challenging me to design and implement distributed frameworks which aim to compete current ones. Also, as a lab member I was enabled to attend several seminars from many great scientist from all the world. (http://dicl.unist.ac.kr/)</p>
-        <div class="resume-item">
-          <ul class="resume-item-list">
-            <li>First contributor and designer of Velox framework (experimental distributed cache framework with data migration and Chord network) currently working on it, along two other graduate students.</li>
-            <li>Development of Simring simulator (another experimental distributed cache using file migration).</li>
-            <li>Teacher Assistant and official tutor for Engineering programming (First year programming course).</li>
-          </ul>
-        </div>
-        </div><!-- end of resume-item -->
+        {% endif %}
 
         <!-- by now you're getting the picture... -->
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
@@ -154,8 +179,22 @@
       <section class="content-section">
 
         <header class="section-header">
-          <h2>Projects</h2>
+          <h2>Projects and Publications</h2>
         </header>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">FactoryStreaming</h3>
+          <h4 class="resume-item-details">Architect, Fraunhofer IOSB-INA &bull; 2017 &mdash; 2018</h4>
+          <p class="resume-item-copy">FactoryStreaming is big data solution to analize, store and visualize real time data from Smart factories.
+          It uses technologies such as stream processing, data pipelining, time series databases and industrial protocols </p>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">EclipseMR: Distributed and Parallel Task Processing with Consistent Hashing</h3>
+          <h4 class="resume-item-details">Main author, IEEE cluster 2017</h4>
+          <p class="resume-item-copy">In this work I present a novel MapReduce framework prototype that efficiently utilizes a 
+          large distributed memory in cluster environments.</p>
+        </div>
 
         <div class="resume-item">
           <h3 class="resume-item-title">Velox big data framework</a></h3>

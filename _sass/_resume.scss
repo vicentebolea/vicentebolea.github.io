@@ -154,7 +154,11 @@
     }
   }
 
-  .resume-item-copy { margin: .75rem 0 0; }
+  .resume-item-copy { 
+    margin: .75rem 0 0; 
+    text-align: justify;
+    text-justify: inter-word; 
+  }
 }
 
 // footer styles
