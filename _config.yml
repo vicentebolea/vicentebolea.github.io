@@ -1,6 +1,6 @@
 # Site settings
 title: "Vicente's Portfolio"
-description: "Personal site."
+description: "A gentle introduction"
 
 # Build settings
 markdown: kramdown
@@ -11,8 +11,8 @@ sass:
 # Resume settings
 resume_avatar:                  "true"
 resume_name:                    "Vicente Adolfo Bolea Sanchez"
-resume_title:                   "M.S. Computer Sciences specialized in Big Data Systems"
-resume_contact_email:            "vicente.bolea@gmail.com"
+resume_title:                   "M.S. of Big Data Systems & Software Engineer"
+resume_contact_email:           "vicente.bolea@gmail.com"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
