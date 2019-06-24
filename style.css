@@ -1,0 +1,79 @@
+html {
+  color: #c0392b;
+  background-color: black;
+  font-family: "VT323";
+}
+
+body {
+  width: 720px;
+  float: center;
+  margin: auto;
+}
+
+nav {
+  width: 60%;
+}
+
+nav a {
+  margin: auto;
+  float: left;
+  padding: auto;
+  width:25%;
+  text-align: center;
+}
+
+article {
+  font-family: "Space Mono";
+  text-align: justify;
+}
+
+article h2 {
+  font-family: "VT323";
+}
+
+nav {
+  font-size: 18px;
+}
+
+aside {
+  vertical-align: top;
+  display: inline-block;
+  font-family: "VT323";
+  width: 30%;
+  float: right;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+
+#leftcolumn{
+  display: inline-block;
+  width: 65%;
+}
+
+#mainTitle {
+  font-size: 50px;
+  font-family: "VT323";
+  display: inline-block;
+}
+
+#pacmanFigure {
+  max-width:100px;
+  max-height:100px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+#vicentePicture > img {
+  border-radius: 35px;
+}
+
+
+td, th {
+  width: 25%;
+  text-align: left;
+
+}
