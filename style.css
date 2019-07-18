@@ -4,12 +4,15 @@
 :root {
   --color-bg : #002b36; /* Solarized blue */
   --color-fg : #839496; /* Solarized gray */
-  --color-h1 : #dc322f; /* Red */
+  --color-h1 : #cb4b16; /* Red */
   --color-h2 : #6c71c4; /* Purple */
   --color-h3 : #268bd2; /* Blue */
   --color-h4 : #6c71c4; /* Purple */
 }
 
+h2 {
+  font-size: 19.5px;
+}
 article h3 {
   color: var(--color-h3);
 }
@@ -26,8 +29,9 @@ html {
 
 body {
   display: grid;
+  grid-gap: 0px;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 220px auto 50px;
+  grid-template-rows: auto auto 50px;
   width: 720px;
   float: center;
   margin: auto;
@@ -42,6 +46,7 @@ header, footer {
 }
 
 header {
+  margin-bottom: 25px;
 }
 
 nav {
@@ -67,9 +72,13 @@ article {
   text-align: justify;
   background-color: #002b36;
   border-radius: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
+
+article p {
+  font-size: 13px;
+}
 article * {
   margin: 5px;
 }
@@ -82,11 +91,14 @@ article h2 {
 
 aside {
   vertical-align: top;
-  padding: 5px 30px 5px 30px;
   grid-column: 9 / span 12;
   grid-row: 2;
   font-family: "VT323";
   text-align: justify;
+  padding: 5px 30px 5px 30px;
+}
+
+aside figure {
 }
 
 img {
@@ -106,11 +118,13 @@ figure {
 }
 
 #mainTitle {
+  color: var(--color-h1);
   font-size: 50px;
   font-family: "VT323";
   display: inline-block;
 }
 #subTitle {
+  color: var(--color-h3);
 }
 
 #pacmanFigure {
