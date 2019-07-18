@@ -1,0 +1,138 @@
+/*
+ *
+ */
+:root {
+  --color-bg : #002b36; /* Solarized blue */
+  --color-fg : #839496; /* Solarized gray */
+  --color-h1 : #dc322f; /* Red */
+  --color-h2 : #6c71c4; /* Purple */
+  --color-h3 : #268bd2; /* Blue */
+  --color-h4 : #6c71c4; /* Purple */
+}
+
+article h3 {
+  color: var(--color-h3);
+}
+
+article h4 {
+  color: var(--color-h4);
+}
+html {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: "VT323";
+  font-weight: bold;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 220px auto 50px;
+  width: 720px;
+  float: center;
+  margin: auto;
+}
+
+a {
+  color: var(--color-h2);
+}
+
+header, footer {
+  grid-column: 1/ span 12;
+}
+
+header {
+}
+
+nav {
+  width: 80%;
+  font-size: 18px;
+  grid-row: 3;
+  grid-column: 1/ span 12;
+  text-align: center;
+  margin: 0 auto;
+}
+
+nav a {
+  margin: auto;
+  float: left;
+  padding: auto;
+  width:25%;
+  text-align: center;
+  display: inline-block;
+}
+
+article {
+  font-family: "Space Mono";
+  text-align: justify;
+  background-color: #002b36;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+article * {
+  margin: 5px;
+}
+
+article h2 {
+  font-family: "VT323";
+  color: var(--color-h1);
+}
+
+
+aside {
+  vertical-align: top;
+  padding: 5px 30px 5px 30px;
+  grid-column: 9 / span 12;
+  grid-row: 2;
+  font-family: "VT323";
+  text-align: justify;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
+}
+
+figure {
+  margin-inline-start : 5px;
+  margin-inline-end: 5px;
+}
+
+#leftcolumn{
+  grid-column: 1/ span 8;
+  grid-row: 2;
+  right-padding: 30px;
+}
+
+#mainTitle {
+  font-size: 50px;
+  font-family: "VT323";
+  display: inline-block;
+}
+#subTitle {
+}
+
+#pacmanFigure {
+  max-width:100px;
+  max-height:100px;
+  display: inline-block;
+  vertical-align: bottom;
+  grid-column: 10 / span 12;
+  grid-row: 1;
+}
+
+#vicentePicture > img {
+  border-radius: 35px;
+}
+
+td, th {
+  width: 25%;
+  text-align: left;
+}
+
+.keyPoints {
+  color: var(--color-h2);
+  list-style-type: square;
+  font-size: 15px;
+}
