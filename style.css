@@ -9,6 +9,7 @@
 
 h2 {
   font-size: 19.5px;
+  text-align:center;
 }
 article h3 {
   color: var(--color-h3);
@@ -27,8 +28,8 @@ html {
 body {
   display: grid;
   grid-gap: 0px;
-  width: 720px;
-  grid-template-columns: repeat(12, 60px);
+  width: 1024px;
+  grid-template-columns: repeat(12, 85px);
   grid-template-rows: auto auto 50px;
   float: center;
   margin: auto;
@@ -91,14 +92,11 @@ article h2 {
 
 aside {
   vertical-align: top;
-  grid-column: span 4 / 13;
+  grid-column: span 3 / 13;
   grid-row: 2;
   font-family: "VT323";
   text-align: justify;
   padding: 5px 30px 5px 30px;
-}
-
-aside figure {
 }
 
 img {
@@ -119,25 +117,18 @@ figure {
 
 #mainTitle {
   color: var(--color-h1);
-  font-size: 50px;
+  font-size: 60px;
   font-family: "VT323";
   display: inline-block;
+  margin: 15px;
 }
 #subTitle {
   color: var(--color-h3);
 }
 
-#pacmanFigure {
-  max-width:100px;
-  max-height:100px;
-  display: inline-block;
-  vertical-align: bottom;
-  grid-column: 10 / span 12;
-  grid-row: 1;
-}
-
 #vicentePicture > img {
   border-radius: 35px;
+  width: 70%;
 }
 
 td, th {
@@ -156,10 +147,16 @@ td, th {
   margin-bottom: 10px;
   font-size: 13px
 }
+.contentArticle {
+  margin-top: 20px;
+}
 
 .contentArticle * {
   text-align:left;
   margin: 1.5px;
+}
+.contentArticle h2 {
+  text-align: center;
 }
 .resumeItem {
   margin-bottom: 20px;
