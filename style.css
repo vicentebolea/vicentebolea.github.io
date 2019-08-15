@@ -41,6 +41,8 @@ a {
 
 header, footer {
   grid-column: 1 / 13;
+  margin: center;
+  width: 748px;
 }
 
 header {
