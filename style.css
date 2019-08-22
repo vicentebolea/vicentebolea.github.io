@@ -41,7 +41,10 @@ a {
 
 header, footer {
   grid-column: 1 / 13;
-  margin: center;
+  margin: auto;
+}
+
+footer{
   width: 748px;
 }
 
